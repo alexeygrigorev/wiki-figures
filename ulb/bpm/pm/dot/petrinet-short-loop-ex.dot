@@ -1,0 +1,17 @@
+digraph G {
+    rankdir=LR;
+    subgraph place {
+        node [shape=circle,fixedsize=true,label=" "];
+        i [label="&bull;", fontsize=40];
+        p1;  o;
+    }
+    subgraph transitions {
+        node [shape=rect,height=.5,width=.5];
+        a; b; c;
+    }
+    
+    i -> a -> p1 -> c -> o; 
+    p1 -> b -> p1;
+   { rank=same; p1; b; };
+
+}

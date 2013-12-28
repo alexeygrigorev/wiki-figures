@@ -1,0 +1,22 @@
+digraph G1 {
+    rankdir=LR;
+    subgraph place {
+        node [shape=circle,fixedsize=true,label=" "];
+        p1;
+    }
+    subgraph transitions {
+        style="rounded,dashed";
+        color=red;
+        node [shape=rect,height=.5,width=.5];
+        subgraph cluster_a {
+            label="A";
+            a;b;        
+        }
+        subgraph cluster_b {
+            label="B";
+            c;d;
+        }
+    }
+
+   {a,b}->p1->{c,d};
+}

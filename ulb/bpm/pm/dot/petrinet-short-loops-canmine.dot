@@ -1,0 +1,22 @@
+digraph G {
+    rankdir=LR;
+    subgraph place {
+        node [shape=circle,fixedsize=true,label=" "];
+        i [label="&bull;", fontsize=40];
+        o; p1; p2;
+    }
+    subgraph transitions {
+        node [shape=rect,height=.5,width=.5];
+        a;b;c;d;e;f; 
+    }
+
+    i->a->p1->c->p2->f->o;
+    p2->d->p1;
+    p1->b->p1;
+    p2->e->p2;
+
+   {rank=same; p1; b;}
+   {rank=same; p2; e;}
+   {rank=same; c; d;}
+   
+}

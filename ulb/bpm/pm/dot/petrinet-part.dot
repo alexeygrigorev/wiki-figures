@@ -1,0 +1,47 @@
+digraph G1 {
+    rankdir=LR;
+    s1 [style="invisible", shape=record, label="<0>|<1>||<2>|<3>"];
+    s2 [style="invisible", shape=record, label="<0>|<1>||<2>|<3>"];
+    
+    subgraph place {
+        node [shape=circle,fixedsize=true,label=" "];
+        p1;p2;
+    }
+    subgraph transitions {
+        node [shape=rect,height=.5,width=.5];
+        a;
+    }
+  
+    s1:0->p1 [color=red];
+    s1:1->p1;
+    {p1, p2}->a;
+    s1:2->p2;
+    s1:3->p2 [color=red];
+    a->s2:2;
+    a->s2:3;
+}
+
+digraph G2 {
+    rankdir=LR;
+    s1 [style="invisible", shape=record, label="<0>|<1>||<2>|<3>"];
+    s2 [style="invisible", shape=record, label="<0>|<1>||<2>|<3>"];
+    
+    subgraph place {
+        node [shape=circle,fixedsize=true,label=" "];
+        p1;
+    }
+    subgraph transitions {
+        node [shape=rect,height=.5,width=.5];
+        a;b;
+    }
+  
+    s1:0->a [color=red];
+    s1:1->p1;
+    s1:2->p1;
+    p1->{a, b};
+    s1:3->b [color=red];
+    a->s2:0;
+    a->s2:1;
+    b->s2:2;
+    b->s2:3;
+}
