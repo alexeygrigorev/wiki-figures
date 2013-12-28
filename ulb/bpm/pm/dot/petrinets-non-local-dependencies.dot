@@ -1,0 +1,20 @@
+digraph G {
+    rankdir=LR;
+    subgraph place {
+        node [shape=circle,fixedsize=true,label=" "];
+        i [label="&bull;", fontsize=40];
+        { node [color=blue, style=filled, fillcolor=blue]; p1; p2; }          
+        o; p3; p4;      
+    }
+    subgraph transitions {
+        node [shape=rect,height=.5,width=.5];
+        a; b; c; d; e;
+    }
+
+    i->a->p3->c->p4->d->o;
+    i->b->p3; p4->e->o;
+    a->p1->d [color=blue];
+    b->p2->e [color=blue];
+
+    {rank=same;p1;p2;c;}
+}
