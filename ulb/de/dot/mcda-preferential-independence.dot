@@ -1,0 +1,16 @@
+digraph A {
+
+  rankdir=LR;
+  center=true; margin=1; 
+  nodesep=1; ranksep=1.5;
+
+  node [shape=point,  height=".2", width=".2"];
+
+  a->{b,c};
+  b->d->c;
+  
+  {rank=same;c;a;}
+  {rank=same;b;d;}
+
+
+}

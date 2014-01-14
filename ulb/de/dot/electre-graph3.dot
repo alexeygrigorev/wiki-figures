@@ -1,0 +1,21 @@
+digraph A {
+  rankdir=LR;
+  center=true; margin=1; 
+
+  node [height="0.33", width="0.33", fixedsize=true];
+
+  7;
+  6->{4,5} [dir="back"];  
+  4->5->4;
+  {4,5}->3;
+  3->2 [dir="back"];
+  2->1;
+
+  2,5,7 [style=filled, fillcolor=red, peripheries=2];
+  
+  3->7 [style=invis];
+  {rank=same; 4;5;}
+  {rank=same; 2;7;}
+
+
+}

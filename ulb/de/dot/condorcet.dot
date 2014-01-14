@@ -1,0 +1,15 @@
+digraph A {
+
+  rankdir=LR;
+  center=true; margin=1; 
+  nodesep=1.5; ranksep=0.5;
+
+  node [shape=point,  height=".2", width=".2"];
+edge [arrowhead=normal,arrowtail=dot];
+a;b;c;
+
+  a->b->c;  
+  a -> c [style=dotted,arrowhead = none,color=red];
+
+
+}

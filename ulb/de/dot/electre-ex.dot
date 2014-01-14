@@ -1,0 +1,16 @@
+digraph G {
+  
+  rankdir=LR;
+  nodesep=0.5; ranksep=1.1;
+  center=true; margin=0.5; 
+  node [height="0.33", width="0.33", fixedsize=true];
+
+  A;B;C;D;E;
+
+  {E,B}->A;
+  B->E;
+  E->C->D;
+  A->D [dir="back"]; 
+  {rank=same; B;C;E;}
+  {rank=same; D;A;}
+}

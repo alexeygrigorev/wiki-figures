@@ -1,0 +1,27 @@
+digraph G {
+  
+  rankdir=LR;
+
+  center=true; margin=0.5; 
+  node [height="0.33", width="0.33", fixedsize=true];
+
+  a->e [label="&pi;(a, e)"];
+  b->e [label="&pi;(b, e)"];
+  c->e [label="&pi;(c, e)"];
+  d->e [label="&pi;(d, e)"];
+
+}
+
+digraph G {
+  
+  rankdir=LR;
+
+  center=true; margin=0.5; 
+  node [height="0.33", width="0.33", fixedsize=true];
+
+  e->a [label="&pi;(e, a)"];
+  e->b [label="&pi;(e, b)"];
+  e->c [label="&pi;(e, c)"];
+  e->d [label="&pi;(e, d)"];
+
+}

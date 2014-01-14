@@ -1,0 +1,13 @@
+digraph G {
+  
+  rankdir=LR;
+
+  nodesep=1; ranksep=0.9;
+  center=true; margin=0.5; 
+  node [height="0.33", width="0.33", fixedsize=true];
+
+  {a,b}->c;
+  a->b [style=dotted, arrowhead=none, color=red];
+  {rank=same;a;b;}
+  
+}

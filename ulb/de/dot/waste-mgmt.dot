@@ -1,0 +1,20 @@
+digraph A {
+
+  rankdir=LR;
+  center=true; margin=1; 
+  nodesep=0.7; ranksep=1.5;
+
+  node [height="0.5", width="0.5", fixedsize=true];
+  
+  X [xlabel=100, color=red, style=dashed];
+  Y [xlabel=150, color=red, style=dashed, height="0.7", width="0.7"];
+  I1 [xlabel=150, color=blue, height="0.7", width="0.7"];
+  I2 [xlabel=100, color=blue];
+  
+  X->I1 [label=2];
+  X->I2 [label=3];
+  Y->I1 [label=3];
+  Y->I2 [label=4];
+
+
+}
