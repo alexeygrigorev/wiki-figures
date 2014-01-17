@@ -1,0 +1,28 @@
+digraph A {
+  rankdir=LR;
+  center=true; margin=1; 
+  nodesep=0.5; ranksep=0.6;
+
+  # only streight lines
+  splines=line;
+  edge [fontsize=9, fontname="times-italic", fontcolor=blue];
+
+  st [height=".2", width=".2", label=""];
+  M, N [shape=normal, fixedsize=true, height=".2", width="0.7"];
+
+  st -> M [label="p(RG)=0.55"];
+  st -> N [label="p(RP)=0.45"];
+
+
+  node [shape=none, fixedsize=true, height=".3", width=".4"]; 
+  mg [shape=none, label="13"]; 
+  mp [shape=none, label="-1.5"]; 
+  ng [shape=none, label="8"]; 
+  np [shape=none, label="5"];
+
+  M -> mg [label="p(G|RG)=0.89"]; 
+  M -> mp [label="p(P|RG)=0.11"];
+  N -> ng [label="p(G|RP)=0.47"]; 
+  N -> np [label="p(P|RP)=0.53"];
+
+}

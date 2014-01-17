@@ -1,0 +1,20 @@
+digraph A {
+
+  rankdir=LR;
+  center=true; margin=1; 
+  nodesep=0.5; ranksep=1;
+
+  node [height=".2", width=".2"];
+  edge [fontsize=9];
+  
+  a [label=""];
+  b [shape=none, label="3m"]; 
+  in [style=invis]; 
+  c [shape=none, label="-2m"]; 
+  
+ a->b [label="p(W)=0.6"];
+ a->in [style=invis]
+ a->c [label="p(L)=0.4"];
+
+
+}

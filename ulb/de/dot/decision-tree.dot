@@ -1,0 +1,37 @@
+digraph A {
+
+  rankdir=LR;
+  center=true; margin=1; 
+  nodesep=0.5; ranksep=0.6;
+
+  # only streight lines
+  splines=line;
+
+  node [height=".2", width=".2"];
+  edge [fontsize=9, fontname="times-italic", fontcolor=blue];
+  
+  a [label=""];
+
+ c [label="C"];  
+ in [style=invis];
+ notc [label="not C"];  
+ c, notc [shape=normal, fixedsize=true, height=".2", width="0.7"];
+
+
+ a->c [label="p(GW)"];
+ a -> in [style=invis];
+ a->notc [label="p(GL)"];
+
+ cw [shape=none, label="3m"]; 
+ cl [shape=none, label="-2m"]; 
+ nw  [shape=none, label="0"]; 
+ nl  [shape=none, label="0"];
+    
+ c-> cw [label="p(W|GW)"];
+ c-> cl [label="p(L|GW)"];
+
+ notc -> nw [label="p(W|GL)"];
+ notc -> nl [label="p(L|GL)"];
+
+
+}

@@ -1,0 +1,36 @@
+digraph A {
+  rankdir=LR;
+  center=true; margin=1; 
+  nodesep=0.2; ranksep=0.6;
+
+  # only streight lines
+  splines=line;
+
+  edge [fontsize=9, fontname="times-italic", fontcolor=blue];
+  
+  # decision nodes
+  l1 [label="", shape=normal, fixedsize=true, height=".2", width="0.7"];
+
+  E1, M1, S1 [fixedsize=true, height=".3", width=".3"];
+  E1 [label=E];
+  M1 [label=M]; 
+  S1 [label=S]; 
+  l1 -> {E1, M1, S1};
+
+  node [shape=none , fixedsize=true, height=".3", width=".4"]; 
+  eg1 [label="8"];
+  ep1 [label="5"];
+  mg1 [label="13"];
+  mp1 [label="-1.5"];
+  sg1 [label="3.2"];
+  sp1 [label="3.2"];
+
+  E1->eg1 [label=G];
+  E1->ep1 [label=P];
+  M1->mg1 [label=G];
+  M1->mp1 [label=P];
+  S1->sg1 [label=G]
+  S1->sp1 [label=P];
+
+
+}
