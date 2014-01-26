@@ -1,0 +1,23 @@
+digraph G {
+    center=true; margin=1; 
+    normalize=true;
+   #rotate=90;
+    subgraph place {
+        node [shape=circle,fixedsize=true,label="", height=.3,width=.3];
+       p1, p2, p3, p4, p5;
+    }
+    subgraph transitions {
+        node [shape=rect,height=0.4,width=.4, rotate=90];
+        refill;
+        disp [label="dispence\ncandy"];
+        rej [label="reject\ncoin"];
+        ins [label="insert\ncoin"];
+        ac [label="accept\ncoin"];
+    }
+    
+    refill->p1->disp->p3->ins->p4->ac->p5->disp->p2->refill;
+    p4->rej->p3;
+    rej->p5 [style=invis];
+
+  
+}

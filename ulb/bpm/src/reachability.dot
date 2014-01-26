@@ -1,0 +1,37 @@
+digraph G {
+    rankdir=LR;
+   center=true; margin=1; 
+
+  fontsize=12;
+normalize=true;
+nodesep=0.3;
+
+edge [len=1.3, minlen=1];
+node [shape=none, fixedsize=true];
+
+i [label="[i]"];
+p1 [label=<&#91;p<SUB>1</SUB>, p<SUB>5</SUB>&#93;>];
+p2 [label=<&#91;p<SUB>2</SUB>, p<SUB>5</SUB>&#93;>];
+p3 [label=<&#91;p<SUB>3</SUB>, p<SUB>5</SUB>&#93;>];
+p4 [label=<&#91;p<SUB>1</SUB>, p<SUB>6</SUB>&#93;>];
+p5 [label=<&#91;p<SUB>2</SUB>, p<SUB>6</SUB>&#93;>];
+p6 [label=<&#91;p<SUB>3</SUB>, p<SUB>6</SUB>&#93;>];
+p7 [label=<&#91;p<SUB>4</SUB>&#93;>];
+o [label="[o]"];
+
+i->p1 [label=x];
+p1->p2 [label=a];
+p2->p5 [label=d];
+p5->p2 [label=e];
+p1->p3 [label=b];
+p3->p6 [label=d];
+p6->p3 [label=e];
+p1->p4 [label=d];
+p4->p1 [label=e];
+p4->p5 [label=b];
+p4->p6 [label=a];
+p7->o [style=invis];
+p4->{o, p7} [style=invis];
+
+
+}

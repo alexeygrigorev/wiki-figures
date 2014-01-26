@@ -1,0 +1,11 @@
+digraph G {
+  rankdir=LR;
+  center=true; margin=1; 
+  ranksep=0.3;
+
+  p1;"+1";p2;"-1";
+  p1,p2 [shape=circle,fixedsize=true,label="", height=.3,width=.3];
+
+  "+1", "-1" [shape=rect,height=0.4,width=.4];
+  p1->"+1"->p2->"-1"->p1;
+}
