@@ -1,0 +1,10 @@
+digraph A {
+  rankdir=LR;
+  center=true; margin=1; 
+  nodesep=0.7; ranksep=0.5;
+  node [shape=rect, fontsize=11, height=0.3]
+  edge [fontsize=10]
+  "?player"->"striker" [label="position"]
+  "?player"->"?club" [label="playsFor"]
+  "?club"->"Barcelona" [label="region"]
+}
