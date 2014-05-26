@@ -1,0 +1,36 @@
+digraph A {
+  node[shape=none, fontsize=10, width=0.37, height=0.2 fixedsize=true]
+  edge[arrowsize=.4,color="#cccccc"]
+  nodesep=0.05
+
+  "{}"[shape=box, style=filled, color="#FF0000"] # 4
+  B,D,F,BD [shape=box, style=filled, color="#FF5959"] # 3
+  A,C,E,AB,AD,BF,CF,DF,ABD,BDF [shape=box, style=filled, color="#FFA1A1"] # 2
+
+  A->B->C->D->E->F [style=invis];
+  {A B C D E F rank=same}
+  "{}" -> "A","C","B","E","D","F"
+  "E" -> "BE","DE","AE","EF","CE"
+  "D" -> "DF","DE","AD","CD","BD"
+  "F" -> "BF","DF","AF","EF","CF"
+  "A" -> "AC","AB","AE","AD","AF"
+  "C" -> "BC","AC","CF","CE","CD"
+  "B" -> "BE","BF","BC","AB","BD"
+  "BE"
+  "BF" -> "BCF","BEF","ABF","BDF"
+  "BC"
+  "DF" -> "DEF","ADF","BDF","CDF"
+  "DE"
+  "AC"
+  "AB" -> "ABC","ABF","ABD","ABE"
+  "AE"
+  "AD" -> "ACD","ABD","ADF","ADE"
+  "AF"
+  "CF" -> "ACF","BCF","CEF","CDF"
+  "CE"
+  "CD"
+  "EF"
+  "BD" -> "BCD","ABD","BDF","BDE"
+  "ABD" -> "ABDE","ABDF","ABCD"
+  "BDF" -> "BCDF","BDEF","ABDF"
+}
