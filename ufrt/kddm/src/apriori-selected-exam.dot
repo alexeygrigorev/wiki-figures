@@ -1,0 +1,20 @@
+digraph A {
+  node[shape=none, fontsize=10, width=0.3, height=0.2 fixedsize=true]
+  edge[arrowsize=.4,color="#cccccc"]
+  nodesep=0.05
+  center=true; margin=1; 
+  
+  A->B->C->D->E->F [style=invis];
+  {A,B,C,D,E,F rank=same}
+  "{}",B,D [shape=box, style=filled, color="#FF0000"] # 4
+  A,C,AB [shape=box, style=filled, color="#FF5959"] # 3
+  AD,BC,BD,CD,ABD,BCD [shape=box, style=filled, color="#FFA1A1"] # 2
+
+  "{}" -> A,B,C,D,E,F
+  A->AB,AC,AD
+  B->AB,BC,BD
+  C->AC,BC,CD
+  D->AD,BD,CD
+  AB,AD,BD->ABD
+  BC,BD,CD->BCD
+}
